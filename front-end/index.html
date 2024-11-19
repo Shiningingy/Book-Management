@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Book Inventory Management</h1>
+    </header>
+    
+    <main>
+        <!-- Add Book Form -->
+        <section id="add-book-section">
+            <h2>Add a New Book</h2>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <input type="text" id="genre" name="genre">
+                </div>
+                <div class="form-group">
+                    <label for="pubDate">Publication Date</label>
+                    <input type="date" id="pubDate" name="pubDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" name="isbn" required>
+                </div>
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </section>
+        
+        <!-- Filter Books Form -->
+        <section id="filter-books-section">
+            <h2>Filter Books</h2>
+            <form id="filterForm">
+                <div class="form-group">
+                    <label for="filterTitle">Title</label>
+                    <input type="text" id="filterTitle" name="filterTitle">
+                </div>
+                <div class="form-group">
+                    <label for="filterAuthor">Author</label>
+                    <input type="text" id="filterAuthor" name="filterAuthor">
+                </div>
+                <div class="form-group">
+                    <label for="filterGenre">Genre</label>
+                    <input type="text" id="filterGenre" name="filterGenre">
+                </div>
+                <div class="form-group">
+                    <label for="filterPubDate">Publication Date</label>
+                    <input type="date" id="filterPubDate" name="filterPubDate">
+                </div>
+                <button type="submit" class="btn">Filter Books</button>
+            </form>
+        </section>
+    
+        <!-- Book List -->
+        <section id="book-list-section">
+            <h2>Book List</h2>
+            <button id="exportCSV" class="btn">Export CSV</button>
+            <button id="exportJSON" class="btn">Export JSON</button>
+            <div id="bookListTableWrapper">
+                <table id="bookListTable">
+                    <thead>
+                        <tr id="bookListTableTitle">
+                            <th>Entry ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Genre</th>
+                            <th>Publication Date</th>
+                            <th>ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookListBody">
+                        <!-- Book data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Book Inventory Management © 2024</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
